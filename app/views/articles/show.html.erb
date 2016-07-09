@@ -1,0 +1,10 @@
+<h2><%= @article.title %></h2>
+<div class="well">
+	<div class="text-center">
+		<%= @article.description %>
+		<%= link_to "Edit", edit_article_path(@article), class: 'btn btn-primary' %>
+		<%= link_to "Delete", article_path(@article), class: 'btn btn-danger', method: :delete, data: {confirm: "Are you sure?"} %>
+	</div>
+</div>
+
+<%= link_to "Back", root_path %>
